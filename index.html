@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title</title>
+    <link rel="stylesheet" type="" href="./styles.css" />
+    <style>
+      main > * {
+        display: block;
+        margin-bottom: 5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <ui-navbar></ui-navbar>
+    <main>
+      <section-hero id="home"></section-hero>
+      <section-about id="about"></section-about>
+      <section-feature id="services"></section-feature>
+      <section-pricing id="pricing"></section-pricing>
+      <section-testimonials></section-testimonials>
+      <section-faq id="faq" style="scroll-margin-top: -6rem"></section-faq>
+      <section-news></section-news>
+      <section-contact
+        id="contact"
+        style="scroll-margin-top: -6rem"
+      ></section-contact>
+    </main>
+    <footer class="footer">
+      <div class="container footer__top">
+        <!-- Left: logo / description -->
+        <div class="footer__brand">
+          <img
+            src="./assets/LogoLumivue2.png"
+            alt="Lumivue Medical Care logo"
+          />
+          <p class="muted">
+            Compassionate, modern healthcare focused on clarity, comfort, and
+            patient trust.
+          </p>
+        </div>
+
+        <!-- Middle column -->
+        <nav class="footer__nav">
+          <h5>Services</h5>
+          <ul>
+            <li><a href="#">General Checkups</a></li>
+            <li><a href="#">Specialist Care</a></li>
+            <li><a href="#">Diagnostics</a></li>
+            <li><a href="#">Emergency</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right column -->
+        <nav class="footer__nav">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Doctors</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer__bottom">
+        <span>© 2026 Lumivue Medical Care. All rights reserved.</span>
+        <div class="footer__links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>

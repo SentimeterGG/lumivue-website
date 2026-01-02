@@ -338,7 +338,7 @@ a.btn[variant="tertiary"] {
   color: var(--color-primary-500) !important;
 }
 .loader-wrapper {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100vh;

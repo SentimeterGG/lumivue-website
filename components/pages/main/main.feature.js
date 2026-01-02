@@ -80,7 +80,7 @@ class FeatureSection extends HTMLElement {
           
           <ui-card style="grid-area: b">
             <div style="background-color: var(--color-accent-200); border-radius: 0.75rem 0.75rem 0rem 0rem; padding: 2rem;">
-              <img src="./assets/heart.png" alt="image-here">
+              <img src="./assets/heart1.png" alt="image-here">
             </div>
             <div style="padding: 2rem;">
               <h4>Heart Care</h4>

@@ -71,7 +71,7 @@ class HeroSection extends HTMLElement {
     <section class="cta">
       <div class="container cta-wrapper">
         <div class="right-hero" style="position: relative;">
-              <img style="position: absolute; top: 50%; left: 0; transform: translateX(-130%) translateY(-50%) rotate(-45deg) scale(150%); filter: drop-shadow(0 0 200px rgba(0, 0, 0, 0.5));
+              <img style="width: 10rem;position: absolute; top: 50%; left: 0; transform: translateX(-150%) translateY(-50%) rotate(-50deg) scale(200%); filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
 " src="./assets/3pils.png">
           <small class="small-header">
             <div>FDA Approved</div>
@@ -112,10 +112,10 @@ class HeroSection extends HTMLElement {
               Get the care you need, when you need it
             </p>
             <form action="#" method="post" style="margin-top: 1.75rem; position: relative">
-              <img class="cell-image" style="position: absolute; bottom: 0; left: 0; transform: translateX(-60%) translateY(60%); filter: drop-shadow(0 0 200px rgba(0,0,0,0.5);
+              <img class="cell-image" style="width: 14rem;position: absolute; bottom: 0; left: 0; transform: translateX(-60%) translateY(60%); filter: drop-shadow(0 0 20px rgba(0,0,0,0.15));
 " src="./assets/3cell.png">
                 
-              <img style="position: absolute; top: 0; right: 0; transform: translateX(60%) translateY(-100%) rotate(-45deg) scale(70%); filter: drop-shadow(0 0 200px rgba(0,0,0,0.5);
+              <img style=" width: 15rem;position: absolute; top: 0; right: 0; transform: translateX(60%) translateY(-100%) rotate(-45deg) scale(70%); filter: drop-shadow(0 0 20px rgba(0,0,0,0.15));
 " src="./assets/3bottle.png">
                 <div
                 style="

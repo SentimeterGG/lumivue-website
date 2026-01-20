@@ -15,7 +15,7 @@ class SectionPricing extends HTMLElement {
       .section-pricing__grid {
         display: grid;
         gap: var(--gap-size);
-        grid-template-columns: repeat(auto-fit, minmax(36rem,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(clamp(10rem, 70vw, 25rem),1fr));
       }
       .card-pricing::part(card) {
         display: flex;
@@ -33,7 +33,7 @@ class SectionPricing extends HTMLElement {
         height: min-content;
       }
       .card-pricing__benefit {
-        line-height: 270%;
+        line-height: clamp(200%, 4vw, 270%);
       }
       .card-pricing__benefit li {
         list-style: none;
@@ -41,9 +41,9 @@ class SectionPricing extends HTMLElement {
         background-image: url("assets/check.svg");
         background-repeat: no-repeat;
         background-size: 1.25rem;
-        background-position: 0 0.8rem;
+        background-position: 0 clamp(0.3rem, 0.5vw, 0.8rem);
         padding-left: 2.25rem;
-        font-size: 1.25rem;
+        font-size: var(--font-size__body);
       }
     </style>
     <section class="section-pricing">

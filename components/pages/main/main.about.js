@@ -5,32 +5,67 @@ class SectionAbout extends HTMLElement {
     <style>
       .section-about {
         overflow: hidden;
-        max-height: 55rem;
+        height: min-content;
       }
       .section-about__title {
         margin-bottom: 3rem;
+        text-align: center;
       }
       .section-about__grid {
         display: grid;
-        grid-template-columns: 1fr 0.8fr;
+        grid-template-columns: 1fr;
+        justify-items: center;
         align-items: start;
         gap: 0.75rem;
       }
       .section-about__grid-4 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
       }
       .section-about__grid-4 ui-card h1 {
         font-weight: 600;
         margin-bottom: 1.5rem;
       }
+      
+      .section-about__grid-4 ui-card p{
+        text-align: justify;
+      }
 
       .section-about__grid-4 ui-card::part(card) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background: transparent;
         padding-inline: 0;
         padding-bottom: 0;
+      }.img-lady{
+        display: none;
+      }
+      @media (min-width: 600px){
+          .section-about__grid{
+            grid-template-columns: repeat(1,1fr);
+          }
+          .section-about__grid-4{
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;;
+          }
+          
+        .section-about__grid-4 ui-card::part(card) {
+            align-items: start;
+          }
+          
+        .section-about__title {
+            text-align: left;
+          }
+      }
+      @media (min-width: 769px){
+        .img-lady{
+          display: block;
+        }
+        .section-about__grid{
+          grid-template-columns: repeat(2,1fr);
+        }
       }
     </style>
     <section class="section-about">
@@ -76,6 +111,7 @@ class SectionAbout extends HTMLElement {
             </ui-card>
           </div>
           <img
+            class="img-lady"
             style="
               width: 100%;
               background-size: cover;

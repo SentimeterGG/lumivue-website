@@ -23,11 +23,11 @@ class ContactSection extends HTMLElement {
       .section-contact__bento {
         background: transparent;
         display: grid;
-        grid-template-columns: 1fr auto;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 1fr auto auto;
         grid-template-areas:
-          "a b"
-          "a c";
+          "a"
+          "b"
+          "c";
         justify-items: stretch;
         align-items: stretch;
         gap: 0.75rem;
@@ -35,12 +35,25 @@ class ContactSection extends HTMLElement {
       .section-contact__bento-wrapper{
         filter: drop-shadow(0 0 400px var(--color-secondary-100));
       }
-      .section-contact__bento > :nth-child(1) {
+     .section-contact__bento > :nth-child(1) {
         min-height: 40rem;
       }
-      .section-contact__bento > :nth-child(n + 2):nth-child(-n + 3) {
-        min-width: 40rem;
+      /* .section-contact__bento > :nth-child(n + 2):nth-child(-n + 3) { */
+      /*   min-width: 40rem; */
+      /* } */
+    @media (min-width: 1025px){
+      .section-contact__bento {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto auto;
+        grid-template-areas:
+          "a b"
+          "a b"
+          "a c";
+        justify-items: stretch;
+        align-items: stretch;
+        gap: 0.75rem;
       }
+    }
       .doctors-profile{
         display: flex;
         flex-direction: column;

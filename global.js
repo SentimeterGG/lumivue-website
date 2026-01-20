@@ -59,7 +59,7 @@ button {
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
   color: white;
-  font-size: 1.125rem;
+  font-size: var(--font-size__body);
   cursor: pointer;
   font-family: "Google Sans Flex", sans-serif;
   line-height: 100%;
@@ -95,16 +95,17 @@ button[variant="tertiary"] {
   color: var(--color-text-700);
 }
 a:not(.btn):not(.link-image) {
+  --color-links: var(--color-primary-700);
   position: relative;
   font-size: var(--font-size__body);
-  color: var(--color-primary-700);
+  color: var(--color-links);
   text-decoration: none;
 }
 a:not(.btn):not(.link-image)::before {
   position: absolute;
   bottom: 0;
   content: " ";
-  background: var(--color-primary-700);
+  background: var(--color-links);
   height: 1px;
   width: 0;
   transition: width 0.3s ease-out;
@@ -162,7 +163,7 @@ a.btn {
   padding: 0.75rem 1rem;
   color: white !important;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: var(--font-size__body);
   cursor: pointer;
   font-family: "Google Sans Flex", sans-serif;
   line-height: 100%;

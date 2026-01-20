@@ -6,9 +6,9 @@ class SectionNews extends HTMLElement {
     <style>
       .section-news__carousel {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+        grid-template-columns: repeat(auto-fit, minmax(15rem,1fr));
+        width: 100%;
         gap: 0.75rem;
-        margin-bottom: 3rem;
       }
       .section-news__carousel > *{
         min-height: clamp(15rem,44vw, 30rem);
@@ -16,8 +16,34 @@ class SectionNews extends HTMLElement {
       .section-news__title {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 5rem;
         align-items: end;
+      }
+      .view-more-mobile{
+        text-align: center;
+        display: block;
+      }
+      .view-more-desktop{
+        display: none;
+      }
+      .section-news__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+      }
+      
+      .section-news__container *:not(a){
+        width: 100%;
+      }
+      @media (min-width: 769px){
+        .view-more-desktop{
+          display: block;
+          justify-self: end;
+          white-space: nowrap;
+        }
+        .view-more-mobile{
+            display: none;
+        }
       }
     </style>
     <section class="section-news">
@@ -30,7 +56,7 @@ class SectionNews extends HTMLElement {
               medical insights.
             </p>
           </div>
-          <a href="">View More</a>
+          <a class="view-more-desktop" href="">View More</a>
         </div>
         <div class="section-news__carousel">
           <ui-card-news
@@ -52,6 +78,7 @@ class SectionNews extends HTMLElement {
           >
           </ui-card-news>
         </div>
+          <a class="view-more-mobile" href="">View More</a>
       </div>
     </section>
 `;

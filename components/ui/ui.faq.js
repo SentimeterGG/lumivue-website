@@ -9,14 +9,16 @@ class UIFaq extends HTMLElement {
       ${globalCSS}
       .faq-item__question {
         width: 100%;
-        display: flex;
+        display: grid;
         justify-content: space-between;
         text-align: left;
         color: black;
-        padding: 1.5rem 0;
+        grid-template-columns: 1fr 0.2fr;
+        padding: clamp(1rem, 1vw, 1.5rem) 0;
         border-radius: 0;
         position: relative;
         cursor: pointer;
+        align-items: center;
       }
       .faq-item__question h5 {
         font-weight: 500;
@@ -44,7 +46,11 @@ class UIFaq extends HTMLElement {
       .faq-item__question:hover ~ .faq-item__answer::before {
         height: 3px;
       }
+      
       .faq-item svg {
+        justify-self: end;
+        aspect-ratio: 1/1;
+        height: clamp(1rem, 3vw , 1.25rem);
         transition: transform 0.3s ease-out;
       }
       .faq-item.active svg {

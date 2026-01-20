@@ -1,7 +1,12 @@
-class HeroSection extends HTMLElement {
-  constructor() {
-    super();
-    this.innerHTML = `
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <style>
       .cta {
         width: 100%;
@@ -60,12 +65,6 @@ class HeroSection extends HTMLElement {
         justify-content: center;
         flex-wrap: wrap;
       }
-      @media (min-width: 769px){
-        .left-hero {
-          text-align: left;
-          align-items: start;
-        }
-      }
     </style>
     <section class="cta">
       <div class="container cta-wrapper">
@@ -114,7 +113,5 @@ class HeroSection extends HTMLElement {
         <div class="right-hero" style="height: min-content"></div>
       </div>
     </section>
-`;
-  }
-}
-customElements.define("section-hero", HeroSection);
+  </body>
+</html>

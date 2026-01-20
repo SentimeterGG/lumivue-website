@@ -2,6 +2,7 @@
 :root {
   --container-width: min(95rem, 90%);
   --gap-size: 0.75rem;
+  --navbar-height: 5rem;
   /* font sizes */
   /* --font-size__body: 1.125rem; */
   /* --font-size__h1: 5.652rem; */
@@ -10,16 +11,22 @@
   /* --font-size__h4: 1.999rem; */
   /* --font-size__h5: 1.414rem; */
   /* --font-size__small: 0.85rem; */
-  --font-size__body: clamp(1rem, 0.938vw, 1.125rem);
-  --font-size__h1: clamp(3.5rem, 4.71vw, 5.652rem);
-  --font-size__h2: clamp(2.8rem, 3.33vw, 3.997rem);
-  --font-size__h3: clamp(2rem, 2.36vw, 2.827rem);
+  --font-size__body: clamp(0.9rem, 0.938vw, 1.125rem);
+  --font-size__h1: clamp(2.8rem, 4.71vw, 5.652rem);
+  --font-size__h2: clamp(2.4rem, 3.33vw, 3.997rem);
+  --font-size__h3: clamp(1.8rem, 2.36vw, 2.827rem);
   --font-size__h4: clamp(1.75rem, 1.67vw, 1.999rem);
-  --font-size__h5: clamp(1.25rem, 1.18vw, 1.414rem);
+  --font-size__h5: clamp(1rem, 1.18vw, 1.414rem);
   --font-size__small: clamp(0.75rem, 0.71vw, 0.85rem);
 
   /* line heights */
+  --line-height__body: 1.6;
   --line-height__h1: 1.1;
+  --line-height__h2: 1.15;
+  --line-height__h3: 1.2;
+  --line-height__h4: 1.25;
+  --line-height__h5: 1.35;
+  --line-height__small: 1.5;
 
   --color-text-50: oklch(96.12% 0 89.88);
   --color-text-100: oklch(92.49% 0 89.88);
@@ -76,6 +83,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 body,
 p,
@@ -83,6 +91,11 @@ span {
   font-family: "Google Sans Flex";
   font-weight: 400;
   font-size: var(--font-size__body);
+  line-height: var(--line-height__body);
+}
+main > * {
+  display: block;
+  margin-bottom: 5rem;
 }
 h1,
 h2,
@@ -100,22 +113,28 @@ h1 {
 
 h2 {
   font-size: var(--font-size__h2);
+  line-height: var(--line-height__h2);
+  margin-bottom: 0.5rem;
 }
 
 h3 {
   font-size: var(--font-size__h3);
+  line-height: var(--line-height__h3);
 }
 
 h4 {
   font-size: var(--font-size__h4);
+  line-height: var(--line-height__h4);
 }
 
 h5 {
   font-size: var(--font-size__h5);
+  line-height: var(--line-height__h5);
 }
 
 small {
   font-size: var(--font-size__small);
+  line-height: var(--line-height__small);
 }
 .container {
   width: var(--container-width);
@@ -133,7 +152,7 @@ button {
   border-radius: 0.25rem;
   padding: 0.75rem 1rem;
   color: white;
-  font-size: 1.125rem;
+  font-size: var(--font-size__body);
   cursor: pointer;
   font-family: "Google Sans Flex", sans-serif;
   line-height: 100%;
@@ -168,24 +187,25 @@ button[variant="tertiary"] {
 .muted {
   color: var(--color-text-700);
 }
-a:not(.btn) {
+a:not(.btn):not(.link-image) {
+  --color-links: var(--color-primary-700);
   position: relative;
   font-size: var(--font-size__body);
-  color: var(--color-primary-700);
+  color: var(--color-links);
+  text-decoration: none;
 }
-a:not(.btn)::before {
+a:not(.btn):not(.link-image)::before {
   position: absolute;
   bottom: 0;
   content: " ";
-  background: var(--color-primary-700);
+  background: var(--color-links);
   height: 1px;
   width: 0;
   transition: width 0.3s ease-out;
 }
-a:not(.btn):hover::before {
+a:not(.btn):not(.link-image):hover::before {
   width: 100%;
 }
-
 .footer {
   background: var(--color-accent-100);
 }
@@ -193,14 +213,37 @@ a:not(.btn):hover::before {
 .footer__top {
   padding: 4rem 0rem;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  /* grid-template-columns: 2fr 1fr 1fr; */
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
   gap: 3rem;
 }
-
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 .footer__brand img {
   height: 6rem;
 }
 
+.footer__nav {
+  text-align: center;
+}
+@media (min-width: 769px) {
+  .footer__top {
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .footer__brand {
+    align-items: start;
+    text-align: start;
+  }
+  .footer__nav {
+    text-align: left;
+  }
+}
 .footer__nav h5 {
   margin-bottom: 1rem;
 }
@@ -216,13 +259,9 @@ a:not(.btn):hover::before {
 }
 
 .footer__nav a {
-  color: inherit;
+  --color-links: inherit;
   text-decoration: none;
   opacity: 0.8;
-}
-
-.footer__nav a::before {
-  background: black;
 }
 
 .footer__nav a:hover {
@@ -305,7 +344,7 @@ a.btn {
   padding: 0.75rem 1rem;
   color: white !important;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: var(--font-size__body);
   cursor: pointer;
   font-family: "Google Sans Flex", sans-serif;
   line-height: 100%;

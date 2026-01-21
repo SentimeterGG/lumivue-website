@@ -28,7 +28,7 @@ class SectionTestimonial extends HTMLElement {
       </style>
 
       <section class="section-testimonials">
-        <div style="text-align: center; margin-bottom: 5rem;">
+        <div class="container" style="text-align: center; margin-bottom: 5rem;">
           <h2>Hear It from Our Patients!</h2>
           <p class="muted" style="margin-top: 1rem">
             Heartfelt stories and honest experiences from those we’ve cared for.

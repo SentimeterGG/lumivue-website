@@ -7,6 +7,9 @@ class NavBar extends HTMLElement {
     this.shadowRoot.innerHTML = `
     <style>
       ${globalCSS}
+      .primary-desktop{
+        display: none !important;
+      }
       .logo {
         display: none;
       }
@@ -82,7 +85,10 @@ class NavBar extends HTMLElement {
           display: none;
         }
         .navbar .primary {
-          background: transparent;
+          display: none !important;
+        }
+        .navbar .primary-desktop{
+          display: flex !important;
         }
         .navbar ul {
           display: flex;
@@ -91,6 +97,7 @@ class NavBar extends HTMLElement {
         }
         .navbar ul li {
           display: block;
+          white-space: nowrap;
           aspect-ratio: auto;
         }
         .navbar ul li a {
@@ -146,6 +153,11 @@ class NavBar extends HTMLElement {
               <a href="#home" data-nav="book">
                 <img src="assets/icons/callendart.svg" alt="" />
                 <span class="nav-text">Book</span>
+              </a>
+            </li>
+            <li class="primary-desktop">
+              <a href="#home" data-nav="book">
+                <span class="nav-text">Schedule</span>
               </a>
             </li>
             <li>

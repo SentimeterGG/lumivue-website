@@ -13,6 +13,7 @@ import "./components/pages/main/main.testimonials.js";
 import "./components/pages/main/main.news.js";
 import "./components/pages/main/main.faq.js";
 import "./components/pages/main/main.about.js";
+import "./components/ui/ui.footer.js";
 
 const loaderWrapper = document.querySelector(".loader-wrapper");
 
@@ -24,5 +25,5 @@ window.addEventListener("load", () => {
     setTimeout(() => {
       loaderWrapper.style.display = "none";
     }, 500);
-  }, 2000);
+  }, 500);
 });

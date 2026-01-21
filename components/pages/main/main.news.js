@@ -17,6 +17,7 @@ class SectionNews extends HTMLElement {
         display: flex;
         justify-content: space-between;
         align-items: end;
+        text-align: center;
       }
       .view-more-mobile{
         text-align: center;
@@ -36,6 +37,9 @@ class SectionNews extends HTMLElement {
         width: 100%;
       }
       @media (min-width: 769px){
+        .section-news__title{
+          text-align: start;
+        }
         .view-more-desktop{
           display: block;
           justify-self: end;

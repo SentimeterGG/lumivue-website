@@ -54,7 +54,7 @@ class HeroSection extends HTMLElement {
         flex-direction: column;
       }
       .group-btn {
-        margin-top: 1.125rem;
+        margin-top: 3rem;
         gap: 0.5rem;
         display: flex;
         justify-content: center;
@@ -89,7 +89,7 @@ class HeroSection extends HTMLElement {
           <h1 style="margin-top: 1rem">
             Modern clinic with a touch of technology
           </h1>
-          <p style="margin-top: 1.8rem">
+          <p style="margin-top: 1.8rem; color: var(--color-text-800)">
             Find the best healthcare services, doctor schedules, and the latest
             medical innovations all in one place.
           </p>

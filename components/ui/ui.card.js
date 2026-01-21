@@ -3,7 +3,7 @@ class UICard extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.background =
-      this.getAttribute("background") || "var(--color-accent-100)";
+      this.getAttribute("background") || "var(--color-accent-50)";
     this.style.width = "100%";
     this.style.height = "100%";
     this.shadowRoot.innerHTML = `

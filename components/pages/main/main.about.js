@@ -16,7 +16,7 @@ class SectionAbout extends HTMLElement {
         display: grid;
         grid-template-columns: 1fr;
         justify-items: self-end;
-        align-items: start;
+        align-items: center;
         gap: 0.75rem;
       }
       .section-about__grid-4 {
@@ -58,17 +58,16 @@ class SectionAbout extends HTMLElement {
         .section-about__title {
             text-align: left;
           }
+        .section-about__grid-4{
+          grid-template-columns: repeat(2, 1fr);
+        }
       }
-      @media (min-width: 769px){
+      @media (min-width: 1024px){
         .img-lady{
           display: block;
         }
         .section-about__grid{
-          
           grid-template-columns: repeat(2,1fr);
-        }
-        .section-about__grid-4{
-          grid-template-columns: repeat(2, 1fr));
         }
       }
     </style>

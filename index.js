@@ -14,9 +14,9 @@ import "./components/pages/main/main.news.js";
 import "./components/pages/main/main.faq.js";
 import "./components/pages/main/main.about.js";
 import "./components/ui/ui.footer.js";
+import "./components/ui/ui.card.doctor.js";
 
 const loaderWrapper = document.querySelector(".loader-wrapper");
-
 window.addEventListener("load", () => {
   setTimeout(() => {
     loaderWrapper.style.transition = "opacity 0.5s ease-out";

@@ -13,7 +13,8 @@ class ContactSection extends HTMLElement {
       align-items: end;
     }
       .section-contact {
-        background: var(--color-secondary-50);
+        background: #fff;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, var(--color-secondary-50) 100%);
         padding-block: 5rem;
       }
       .section-contact__title {
@@ -33,7 +34,6 @@ class ContactSection extends HTMLElement {
         gap: 0.75rem;
       }
       .section-contact__bento-wrapper{
-        filter: drop-shadow(0 0 400px var(--color-secondary-100));
       }
      .section-contact__bento > :nth-child(1) {
         min-height: 40rem;

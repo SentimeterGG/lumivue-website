@@ -67,9 +67,25 @@ class NavBar extends HTMLElement {
         filter: invert(100%);
       }
       .navbar .primary {
-        padding: 0rem 0.5rem;
-        border-radius: 0.5rem;
+        position: relative;
+        overflow: visible;
+      }
+      .navbar .primary a{
+        left: 50%;
+        transform: translateX(-50%) translateY(-20%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        height: min(20vw,calc(var(--navbar-height) - 0.8rem));
+        aspect-ratio: 1/1;
+        border-radius: 100rem;
         background-color: var(--color-primary-100);
+      }
+      
+      .navbar .primary a img{
+        height: min(8vw, 1.8rem);
+        filter: invert(0%);
       }
       @media (min-width: 1024px) {
         .navbar {
@@ -138,36 +154,35 @@ class NavBar extends HTMLElement {
         <nav>
           <ul>
             <li>
-              <a href="#home" data-nav="home">
+              <a href="index.html#home" data-nav="home">
                 <img src="assets/icons/home.svg" alt="" />
                 <span class="nav-text">Home</span>
               </a>
             </li>
             <li>
-              <a href="#services" data-nav="services">
+              <a href="index.html#services" data-nav="services">
                 <img src="assets/icons/stetoscope.svg" alt="" />
                 <span class="nav-text">Services</span>
               </a>
             </li>
             <li class="primary">
-              <a href="#home" data-nav="book">
-                <img src="assets/icons/callendart.svg" alt="" />
-                <span class="nav-text">Book</span>
+              <a href="doctor.html" data-nav="book">
+                <img src="assets/plus.svg" alt="" />
               </a>
             </li>
             <li class="primary-desktop">
-              <a href="#home" data-nav="book">
-                <span class="nav-text">Schedule</span>
+              <a href="doctor.html" data-nav="book">
+                <span class="nav-text">Appointment</span>
               </a>
             </li>
             <li>
-              <a href="#faq" data-nav="faq">
+              <a href="index.html#faq" data-nav="faq">
                 <img src="assets/icons/faq.svg" alt="" />
                 <span class="nav-text">FAQs</span>
               </a>
             </li>
             <li>
-              <a href="#contact" data-nav="contact">
+              <a href="index.html#contact" data-nav="contact">
                 <img src="assets/icons/contact.svg" alt="" />
                 <span class="nav-text">Contact</span>
               </a>

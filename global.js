@@ -38,7 +38,6 @@ h3 {
 h4 {
   font-size: var(--font-size__h4);
 }
-
 h5 {
   font-size: var(--font-size__h5);
 }

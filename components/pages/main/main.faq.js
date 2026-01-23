@@ -4,7 +4,8 @@ class SectionFAQ extends HTMLElement {
     this.innerHTML = `
     <style>
       .section-faq {
-        background: var(--color-secondary-50);
+        background: #fff;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, var(--color-secondary-50) 100%);
         padding-block: 5rem;
       }
       .section-faq__container{

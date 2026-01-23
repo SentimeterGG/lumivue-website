@@ -5,9 +5,11 @@ class HeroSection extends HTMLElement {
     <style>
       .cta {
         width: 100%;
-        background: var(--color-secondary-50);
+        background: #ffffff;
+        background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, var(--color-secondary-50) 100%);
         height: 100vh;
         overflow: hidden;
+        padding-top: var(--navbar-height);
       }
       .cta-wrapper {
         height: 100%;
@@ -44,7 +46,7 @@ class HeroSection extends HTMLElement {
         gap: 0.8rem;
       }
       .right-hero {
-        padding-left: 5rem;
+        padding-left: 0rem;
       }
       .left-hero {
         width: inherit;
@@ -60,28 +62,30 @@ class HeroSection extends HTMLElement {
         justify-content: center;
         flex-wrap: wrap;
       }
+      .cta-image{
+        transform: translateX(10%) translateY(5rem);
+      }
       @media (min-width: 769px){
         .left-hero {
           text-align: left;
           align-items: start;
         }
+        .cta-wrapper{
+          justify-items: start;
+        }
+        .cta{
+          padding-top: 0;
+        }
+      }
+      @media (max-width: 425px){
+        .cta{
+          height: calc(100vh + 8rem);
+        }
       }
     </style>
     <section class="cta">
       <div class="container cta-wrapper">
-        <div class="left-hero" style="position: relative">
-          <img
-            style="
-              width: 10rem;
-              position: absolute;
-              top: 50%;
-              left: 0;
-              transform: translateX(clamp(-120%, -20vw, -180%)) translateY(-50%)
-                rotate(-50deg) scale(200%);
-              filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
-            "
-            src="assets/3pils.png"
-          />
+        <div class="left-hero">
           <small class="small-header">
             <div>FDA Approved</div>
             <div>MHRA Approved</div>
@@ -111,7 +115,9 @@ class HeroSection extends HTMLElement {
             </a>
           </div>
         </div>
-        <div class="right-hero" style="height: min-content"></div>
+        <div class="right-hero" style="height: 100vh">
+          <img class="cta-image" style="object-fit: contain; width:clamp(25rem, 50vw, 50rem);" src="assets/doctor.png" alt="">
+        </div>
       </div>
     </section>
 `;

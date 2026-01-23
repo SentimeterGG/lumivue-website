@@ -6,6 +6,7 @@ class SectionAbout extends HTMLElement {
       .section-about {
         overflow: hidden;
         height: min-content;
+        margin-bottom: 10rem;
       }
       .section-about__title {
         margin-bottom: 3rem;
@@ -14,13 +15,13 @@ class SectionAbout extends HTMLElement {
       .section-about__grid {
         display: grid;
         grid-template-columns: 1fr;
-        justify-items: center;
+        justify-items: self-end;
         align-items: start;
         gap: 0.75rem;
       }
       .section-about__grid-4 {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
         gap: 1rem;
       }
       .section-about__grid-4 ui-card h1 {
@@ -47,7 +48,6 @@ class SectionAbout extends HTMLElement {
             grid-template-columns: repeat(1,1fr);
           }
           .section-about__grid-4{
-            grid-template-columns: repeat(2, 1fr);
             gap: 3rem;;
           }
           
@@ -64,7 +64,11 @@ class SectionAbout extends HTMLElement {
           display: block;
         }
         .section-about__grid{
+          
           grid-template-columns: repeat(2,1fr);
+        }
+        .section-about__grid-4{
+          grid-template-columns: repeat(2, 1fr));
         }
       }
     </style>
@@ -113,11 +117,11 @@ class SectionAbout extends HTMLElement {
           <img
             class="img-lady"
             style="
-              width: 100%;
+              width: 80%;
               background-size: cover;
-              transform: translateX(8rem) translateY(-8rem);
+              border-radius: 2rem;
             "
-            src="assets/doctor.png"
+            src="assets/doctor/talking.jpg"
             alt="Img With People here"
           />
         </div>
